@@ -4,7 +4,9 @@
 ## Requirements 📦
 
 - [rez](https://github.com/AcademySoftwareFoundation/rez)
+    - At the time of writing, the rez experience on Windows while using `gitbash` as the default shell isn't ideal but a [PR](https://github.com/AcademySoftwareFoundation/rez/pull/1364) exists that aims to improve it.
 - [make](https://osdn.net/projects/sfnet_ezwinports/downloads/make-4.3-without-guile-w32-bin.zip/) zip archive
+- [gitbash](https://gitforwindows.org/)
 
 ## Building 🔨
 
