@@ -46,21 +46,21 @@ def pre_build_commands():
 
 
 build_command = """ \
-unzip -o $REZ_BUILD_SOURCE_ARCHIVE -d $REZ_BUILD_PATH
+    unzip -o $REZ_BUILD_SOURCE_ARCHIVE -d $REZ_BUILD_PATH
 
-if [ $REZ_BUILD_INSTALL == 1 ]
-then
-    echo -e "\e[1m\e[32mInstalling...\e[0m"
-    for item in $REZ_BUILD_PATH/*
-    do
-        if [ -d "$item" ]
-        then
-            cp -rv $item $REZ_BUILD_INSTALL_PATH
-        fi
-    done
-else
-    echo -e "\e[1m\e[33mNothing more to do. Run ""rez-build -i"" to install\e[0m"
-fi
+    if [ $REZ_BUILD_INSTALL == 1 ]
+    then
+        echo -e "\e[1m\e[32mInstalling...\e[0m"
+        for item in $REZ_BUILD_PATH/*
+        do
+            if [ -d "$item" ]
+            then
+                cp -rv $item $REZ_BUILD_INSTALL_PATH
+            fi
+        done
+    else
+        echo -e "\e[1m\e[33mNothing more to do. Run ""rez-build -i"" to install\e[0m"
+    fi
 """
 
 
